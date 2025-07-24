@@ -26,3 +26,37 @@ body {
   border: 2px solid #000;
   box-sizing: border-box;
 }
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border:solid 15px blue;
+  box-sizing: border-box;
+
+}
+.cross {
+  width: 90px;
+  height: 90px;
+  position: relative; 
+transform: rotate(45deg);  }
+
+  .cross::before,
+  .cross::after {
+    content: '';
+    position: absolute;
+    background-color: red;
+   
+  }
+  .cross::before {
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+   
+  }
+  .cross::after {
+    top: 50%;
+    width: 100%;
+    height: 30%;
+    margin-top: -15%;
+  }
